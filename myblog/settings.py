@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-nyv$x98+j)a_)*(pwl&_ge!u_&nn@hn13sr@&+=o1-)3mx%riy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*", ".onrender.com"]
+ALLOWED_HOSTS = ['philtech-blog.onrender.com']
 
 
 # Application definition

@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator
 from django.contrib import messages
@@ -43,7 +42,7 @@ def get_sidebar_context():
 # ==================================================
 def post_list(request):
     lang = get_lang(request)
-    posts = Post.objects.filter(is_published=True).select_related("category", "author")
+    posts = Post.objects.filter(is_published=True).select_related("category", "author").order_by('-created')
     paginator = Paginator(posts, 5)
     page_obj = paginator.get_page(request.GET.get("page"))
 
@@ -112,7 +111,6 @@ def post_detail(request, slug):
         "post": post,
         "comments": comments,
         "lang": lang,
-        # Pass CTA dynamically to template
         "cta_text": post.get_cta_text_display() if post.cta_text else None,
         "cta_link": post.cta_link,
         "price": post.price,
@@ -128,7 +126,7 @@ def post_detail(request, slug):
 def category_posts(request, slug):
     lang = get_lang(request)
     category = get_object_or_404(Category, slug=slug)
-    posts = category.posts.filter(is_published=True)
+    posts = category.posts.filter(is_published=True).order_by('-created')
     paginator = Paginator(posts, 5)
     page_obj = paginator.get_page(request.GET.get("page"))
 
@@ -151,6 +149,7 @@ def search(request):
             Q(content_en__icontains=query) |
             Q(content_sw__icontains=query)
         )
+    results = results.order_by('-created')
     paginator = Paginator(results, 5)
     page_obj = paginator.get_page(request.GET.get("page"))
 

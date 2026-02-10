@@ -1,0 +1,151 @@
+<<<<<<< HEAD
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "About Phil Tech Blog | Phil Tech" %}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+
+    <!-- ================= ABOUT CARD ================= -->
+    <div class="card p-4 mb-4 shadow-sm">
+        <h1 class="mb-3">{% trans "About" %} <strong>Phil Tech Blog</strong></h1>
+
+        <p>
+            {% trans "Welcome to Phil Tech Blog – your go-to destination for practical tech knowledge, online earning strategies, and digital growth tips. Whether you're a beginner looking to start your online journey or a seasoned professional aiming to scale your skills and income, you've come to the right place." %}
+        </p>
+
+        <h2 class="mt-4">{% trans "Our Mission" %}</h2>
+        <p>{% trans "We aim to empower you with actionable knowledge that helps you:" %}</p>
+        <ul>
+            <li>{% trans "Earn smarter and maximize online opportunities." %}</li>
+            <li>{% trans "Work efficiently using practical tech and programming skills." %}</li>
+            <li>{% trans "Build a sustainable online presence with real results." %}</li>
+        </ul>
+
+        <h2 class="mt-4">{% trans "What We Offer" %}</h2>
+        <p>{% trans "At Phil Tech Blog, we provide:" %}</p>
+        <ul>
+            <li>{% trans "Step-by-step tutorials on programming, web development, and tech tools." %}</li>
+            <li>{% trans "Insider tips for monetizing blogs and websites effectively." %}</li>
+            <li>{% trans "Exclusive affiliate opportunities and guidance for MPESA integration in Tanzania." %}</li>
+            <li>{% trans "Free downloadable resources to kickstart your digital journey immediately." %}</li>
+            <li>{% trans "Regular updates on trending tech insights and practical strategies." %}</li>
+        </ul>
+
+        <h2 class="mt-4">{% trans "Why Follow Us?" %}</h2>
+        <p>
+            {% trans "Our content is designed to be practical, easy to implement, and results-driven. We break down complex concepts into actionable steps, so you can start seeing results right away. From beginner-friendly tutorials to advanced monetization techniques, we ensure you stay ahead in the digital space." %}
+        </p>
+
+        <!-- ================= SUBSCRIBE CTA ================= -->
+        <div class="card bg-primary text-white p-3 mt-4 text-center shadow-sm">
+            <h5>{% trans "Join Our Community" %}</h5>
+            <p>{% trans "Stay updated with the latest tips, guides, and income strategies by subscribing to our newsletter." %}</p>
+            <form action="{% url 'subscribe' %}" method="post" class="d-flex justify-content-center mt-2">
+                {% csrf_token %}
+                <input type="email" name="email" class="form-control w-25 me-2" placeholder="{% trans 'Your email' %}" required>
+                <button class="btn btn-dark">{% trans 'Subscribe Now' %}</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= CATEGORIES LIST ================= -->
+    <div class="card p-3 mb-4 shadow-sm">
+        <h5 class="mb-3">{% trans "Categories" %}</h5>
+        <ul class="list-unstyled">
+            {% for item in category_links %}
+                <li class="mb-1">
+                    <a href="{{ item.first_post.get_absolute_url }}"
+                       class="{% if theme == 'dark' %}text-light{% else %}text-dark{% endif %}">
+                        {% if request.LANGUAGE_CODE == "sw" %}
+                            {{ item.category.name_sw }}
+                        {% else %}
+                            {{ item.category.name_en }}
+                        {% endif %}
+                    </a>
+                </li>
+            {% empty %}
+                <li>{% trans "No categories available." %}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>
+{% endblock %}
+=======
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "About Phil Tech Blog | Phil Tech" %}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+
+    <!-- ================= ABOUT CARD ================= -->
+    <div class="card p-4 mb-4 shadow-sm">
+        <h1 class="mb-3">{% trans "About" %} <strong>Phil Tech Blog</strong></h1>
+
+        <p>
+            {% trans "Welcome to Phil Tech Blog – your go-to destination for practical tech knowledge, online earning strategies, and digital growth tips. Whether you're a beginner looking to start your online journey or a seasoned professional aiming to scale your skills and income, you've come to the right place." %}
+        </p>
+
+        <h2 class="mt-4">{% trans "Our Mission" %}</h2>
+        <p>{% trans "We aim to empower you with actionable knowledge that helps you:" %}</p>
+        <ul>
+            <li>{% trans "Earn smarter and maximize online opportunities." %}</li>
+            <li>{% trans "Work efficiently using practical tech and programming skills." %}</li>
+            <li>{% trans "Build a sustainable online presence with real results." %}</li>
+        </ul>
+
+        <h2 class="mt-4">{% trans "What We Offer" %}</h2>
+        <p>{% trans "At Phil Tech Blog, we provide:" %}</p>
+        <ul>
+            <li>{% trans "Step-by-step tutorials on programming, web development, and tech tools." %}</li>
+            <li>{% trans "Insider tips for monetizing blogs and websites effectively." %}</li>
+            <li>{% trans "Exclusive affiliate opportunities and guidance for MPESA integration in Tanzania." %}</li>
+            <li>{% trans "Free downloadable resources to kickstart your digital journey immediately." %}</li>
+            <li>{% trans "Regular updates on trending tech insights and practical strategies." %}</li>
+        </ul>
+
+        <h2 class="mt-4">{% trans "Why Follow Us?" %}</h2>
+        <p>
+            {% trans "Our content is designed to be practical, easy to implement, and results-driven. We break down complex concepts into actionable steps, so you can start seeing results right away. From beginner-friendly tutorials to advanced monetization techniques, we ensure you stay ahead in the digital space." %}
+        </p>
+
+        <!-- ================= SUBSCRIBE CTA ================= -->
+        <div class="card bg-primary text-white p-3 mt-4 text-center shadow-sm">
+            <h5>{% trans "Join Our Community" %}</h5>
+            <p>{% trans "Stay updated with the latest tips, guides, and income strategies by subscribing to our newsletter." %}</p>
+            <form action="{% url 'subscribe' %}" method="post" class="d-flex justify-content-center mt-2">
+                {% csrf_token %}
+                <input type="email" name="email" class="form-control w-25 me-2" placeholder="{% trans 'Your email' %}" required>
+                <button class="btn btn-dark">{% trans 'Subscribe Now' %}</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= CATEGORIES LIST ================= -->
+    <div class="card p-3 mb-4 shadow-sm">
+        <h5 class="mb-3">{% trans "Categories" %}</h5>
+        <ul class="list-unstyled">
+            {% for item in category_links %}
+                <li class="mb-1">
+                    <a href="{{ item.first_post.get_absolute_url }}"
+                       class="{% if theme == 'dark' %}text-light{% else %}text-dark{% endif %}">
+                        {% if request.LANGUAGE_CODE == "sw" %}
+                            {{ item.category.name_sw }}
+                        {% else %}
+                            {{ item.category.name_en }}
+                        {% endif %}
+                    </a>
+                </li>
+            {% empty %}
+                <li>{% trans "No categories available." %}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>
+{% endblock %}
+>>>>>>> 4a481a0 (Updated blog added comment system and authentication)

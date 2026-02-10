@@ -1,0 +1,265 @@
+<<<<<<< HEAD
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Home" %} - Phil Tech Blog
+{% endblock %}
+
+{% block content %}
+
+<h2 class="mb-4 fw-bold">
+    {% if request.LANGUAGE_CODE == "sw" %}
+        Machapisho Mapya
+    {% else %}
+        Latest Posts
+    {% endif %}
+</h2>
+
+{% for post in posts %}
+<article class="card mb-4 shadow-sm post-card">
+
+    {% if post.featured_image %}
+        <a href="{{ post.get_absolute_url }}">
+            <img src="{{ post.featured_image.url }}"
+                 class="card-img-top post-thumb"
+                 alt="{% if request.LANGUAGE_CODE == 'sw' %}{{ post.title_sw }}{% else %}{{ post.title_en }}{% endif %}">
+        </a>
+    {% endif %}
+
+    <div class="card-body">
+
+        <!-- Title -->
+        <h4 class="card-title fw-bold mb-2">
+            <a href="{{ post.get_absolute_url }}" class="post-link">
+                {% if request.LANGUAGE_CODE == "sw" %}
+                    {{ post.title_sw }}
+                {% else %}
+                    {{ post.title_en }}
+                {% endif %}
+            </a>
+        </h4>
+
+        <!-- Summary -->
+        <p class="card-text post-excerpt">
+            {% if request.LANGUAGE_CODE == "sw" %}
+                {{ post.meta_description_sw|default:post.content_sw|truncatechars:160 }}
+            {% else %}
+                {{ post.meta_description_en|default:post.content_en|truncatechars:160 }}
+            {% endif %}
+        </p>
+
+        <!-- Meta -->
+        <div class="small text-muted mb-2">
+
+            <span>
+                <i class="bi bi-folder"></i>
+                <a href="{{ post.category.get_absolute_url }}" class="category-link">
+                    {% if request.LANGUAGE_CODE == "sw" %}
+                        {{ post.category.name_sw }}
+                    {% else %}
+                        {{ post.category.name_en }}
+                    {% endif %}
+                </a>
+            </span>
+
+            <span class="mx-2">•</span>
+
+            <span>
+                <i class="bi bi-calendar-event"></i>
+                {{ post.created|date:"M d, Y" }}
+            </span>
+
+            <span class="mx-2">•</span>
+
+            <span>
+                <i class="bi bi-eye"></i>
+                {{ post.views }} {% trans "views" %}
+            </span>
+
+        </div>
+
+        <!-- CTA -->
+        <a href="{{ post.get_absolute_url }}" class="btn btn-primary btn-sm fw-semibold">
+            {% trans "Read More" %}
+        </a>
+
+    </div>
+
+</article>
+
+{% empty %}
+<p class="text-muted">
+    {% if request.LANGUAGE_CODE == "sw" %}
+        Hakuna machapisho yaliyopatikana.
+    {% else %}
+        No posts found.
+    {% endif %}
+</p>
+{% endfor %}
+
+<!-- Pagination -->
+{% if posts.has_other_pages %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center mt-3">
+
+        {% if posts.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ posts.previous_page_number }}">
+                {% if request.LANGUAGE_CODE == "sw" %}Awali{% else %}Previous{% endif %}
+            </a>
+        </li>
+        {% endif %}
+
+        {% for num in posts.paginator.page_range %}
+        <li class="page-item {% if posts.number == num %}active{% endif %}">
+            <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+        </li>
+        {% endfor %}
+
+        {% if posts.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ posts.next_page_number }}">
+                {% if request.LANGUAGE_CODE == "sw" %}Ijayo{% else %}Next{% endif %}
+            </a>
+        </li>
+        {% endif %}
+
+    </ul>
+</nav>
+{% endif %}
+
+{% endblock %}
+=======
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Home" %} - Phil Tech Blog
+{% endblock %}
+
+{% block content %}
+
+<h2 class="mb-4 fw-bold">
+    {% if request.LANGUAGE_CODE == "sw" %}
+        Machapisho Mapya
+    {% else %}
+        Latest Posts
+    {% endif %}
+</h2>
+
+{% for post in posts %}
+<article class="card mb-4 shadow-sm post-card">
+
+    {% if post.featured_image %}
+        <a href="{{ post.get_absolute_url }}">
+            <img src="{{ post.featured_image.url }}"
+                 class="card-img-top post-thumb"
+                 alt="{% if request.LANGUAGE_CODE == 'sw' %}{{ post.title_sw }}{% else %}{{ post.title_en }}{% endif %}">
+        </a>
+    {% endif %}
+
+    <div class="card-body">
+
+        <!-- Title -->
+        <h4 class="card-title fw-bold mb-2">
+            <a href="{{ post.get_absolute_url }}" class="post-link">
+                {% if request.LANGUAGE_CODE == "sw" %}
+                    {{ post.title_sw }}
+                {% else %}
+                    {{ post.title_en }}
+                {% endif %}
+            </a>
+        </h4>
+
+        <!-- Summary -->
+        <p class="card-text post-excerpt">
+            {% if request.LANGUAGE_CODE == "sw" %}
+                {{ post.meta_description_sw|default:post.content_sw|truncatechars:160 }}
+            {% else %}
+                {{ post.meta_description_en|default:post.content_en|truncatechars:160 }}
+            {% endif %}
+        </p>
+
+        <!-- Meta -->
+        <div class="small text-muted mb-2">
+
+            <span>
+                <i class="bi bi-folder"></i>
+                <a href="{{ post.category.get_absolute_url }}" class="category-link">
+                    {% if request.LANGUAGE_CODE == "sw" %}
+                        {{ post.category.name_sw }}
+                    {% else %}
+                        {{ post.category.name_en }}
+                    {% endif %}
+                </a>
+            </span>
+
+            <span class="mx-2">•</span>
+
+            <span>
+                <i class="bi bi-calendar-event"></i>
+                {{ post.created|date:"M d, Y" }}
+            </span>
+
+            <span class="mx-2">•</span>
+
+            <span>
+                <i class="bi bi-eye"></i>
+                {{ post.views }} {% trans "views" %}
+            </span>
+
+        </div>
+
+        <!-- CTA -->
+        <a href="{{ post.get_absolute_url }}" class="btn btn-primary btn-sm fw-semibold">
+            {% trans "Read More" %}
+        </a>
+
+    </div>
+
+</article>
+
+{% empty %}
+<p class="text-muted">
+    {% if request.LANGUAGE_CODE == "sw" %}
+        Hakuna machapisho yaliyopatikana.
+    {% else %}
+        No posts found.
+    {% endif %}
+</p>
+{% endfor %}
+
+<!-- Pagination -->
+{% if posts.has_other_pages %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center mt-3">
+
+        {% if posts.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ posts.previous_page_number }}">
+                {% if request.LANGUAGE_CODE == "sw" %}Awali{% else %}Previous{% endif %}
+            </a>
+        </li>
+        {% endif %}
+
+        {% for num in posts.paginator.page_range %}
+        <li class="page-item {% if posts.number == num %}active{% endif %}">
+            <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+        </li>
+        {% endfor %}
+
+        {% if posts.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ posts.next_page_number }}">
+                {% if request.LANGUAGE_CODE == "sw" %}Ijayo{% else %}Next{% endif %}
+            </a>
+        </li>
+        {% endif %}
+
+    </ul>
+</nav>
+{% endif %}
+
+{% endblock %}
+>>>>>>> 4a481a0 (Updated blog added comment system and authentication)

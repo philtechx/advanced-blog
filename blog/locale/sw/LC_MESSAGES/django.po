@@ -1,0 +1,285 @@
+<<<<<<< HEAD
+msgid ""
+msgstr ""
+"Project-Id-Version: Phil Tech Blog 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-08 20:49+0300\n"
+"PO-Revision-Date: 2026-02-08 20:49+0300\n"
+"Last-Translator: Phil <you@example.com>\n"
+"Language-Team: Swahili\n"
+"Language: sw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\blog\templates\about.html:4
+msgid "About Phil Tech Blog | Phil Tech"
+msgstr "Kuhusu Phil Tech Blog | Phil Tech"
+
+#: .\blog\templates\about.html:9
+msgid "About"
+msgstr "Kuhusu"
+
+#: .\blog\templates\about.html:12
+msgid "Welcome to Phil Tech Blog – your go-to destination for practical tech knowledge, online earning strategies, and digital growth tips. Whether you're a beginner looking to start your online journey or a seasoned professional aiming to scale your skills and income, you've come to the right place."
+msgstr "Karibu kwenye Phil Tech Blog – mahali pako pa kupata maarifa ya vitendo ya teknolojia, mikakati ya kupata kipato mtandaoni, na mbinu za kukuza biashara ya kidijitali. Iwe wewe ni mgeni anayeanza safari yako mtandaoni au mtaalamu tajiri mwenye lengo la kuongeza ujuzi na kipato chake, umekuja mahali sahihi."
+
+#: .\blog\templates\about.html:15
+msgid "Our Mission"
+msgstr "Dhamira Yetu"
+
+#: .\blog\templates\about.html:16
+msgid "We aim to empower you with actionable knowledge that helps you:"
+msgstr "Tunakusudiwa kukuwezesha kwa maarifa yanayoweza kutekelezeka yanayokusaidia:"
+
+#: .\blog\templates\about.html:18
+msgid "Earn smarter and maximize online opportunities."
+msgstr "Pata kipato kwa busara na tumia fursa za mtandaoni kikamilifu."
+
+#: .\blog\templates\about.html:19
+msgid "Work efficiently using practical tech and programming skills."
+msgstr "Fanya kazi kwa ufanisi kwa kutumia ujuzi wa teknolojia na programu."
+
+#: .\blog\templates\about.html:20
+msgid "Build a sustainable online presence with real results."
+msgstr "Jenga uwepo mtandaoni endelevu wenye matokeo halisi."
+
+#: .\blog\templates\about.html:23
+msgid "What We Offer"
+msgstr "Tunachotoa"
+
+#: .\blog\templates\about.html:24
+msgid "At Phil Tech Blog, we provide:"
+msgstr "Kwenye Phil Tech Blog, tunatoa:"
+
+#: .\blog\templates\about.html:26
+msgid "Step-by-step tutorials on programming, web development, and tech tools."
+msgstr "Mafunzo ya hatua kwa hatua kuhusu programu, uendelezaji wa wavuti, na zana za teknolojia."
+
+#: .\blog\templates\about.html:27
+msgid "Insider tips for monetizing blogs and websites effectively."
+msgstr "Vidokezo vya ndani vya kupata kipato kutoka kwa blogu na tovuti kwa ufanisi."
+
+#: .\blog\templates\about.html:28
+msgid "Exclusive affiliate opportunities and guidance for MPESA integration in Tanzania."
+msgstr "Fursa za kipekee za ushirikiano na mwongozo wa kuunganisha na MPESA Tanzania."
+
+#: .\blog\templates\about.html:29
+msgid "Free downloadable resources to kickstart your digital journey immediately."
+msgstr "Rasilimali za bure za kupakua ili kuanza safari yako ya kidijitali mara moja."
+
+#: .\blog\templates\about.html:30
+msgid "Regular updates on trending tech insights and practical strategies."
+msgstr "Sasisho la kawaida kuhusu maarifa mapya ya teknolojia na mbinu za vitendo."
+
+#: .\blog\templates\about.html:33
+msgid "Why Follow Us?"
+msgstr "Kwa Nini Utufuate?"
+
+#: .\blog\templates\about.html:35
+msgid "Our content is designed to be practical, easy to implement, and results-driven. We break down complex concepts into actionable steps, so you can start seeing results right away. From beginner-friendly tutorials to advanced monetization techniques, we ensure you stay ahead in the digital space."
+msgstr "Yaliyomo yameundwa kuwa ya vitendo, rahisi kutekeleza, na yanalenga matokeo. Tunavunja dhana ngumu kuwa hatua zinazoweza kuchukuliwa, ili uanze kuona matokeo mara moja. Kutoka mafunzo kwa wanaoanza hadi mbinu za kupata kipato kwa kiwango cha juu, tunahakikisha unasonga mbele kwenye nafasi ya kidijitali."
+
+#: .\blog\templates\about.html:39
+msgid "Join Our Community"
+msgstr "Jiunge na Jamii Yetu"
+
+#: .\blog\templates\about.html:40
+msgid "Stay updated with the latest tips, guides, and income strategies by subscribing to our newsletter."
+msgstr "Baki na taarifa mpya kwa vidokezo, mwongozo, na mikakati ya kipato kwa kujiandikisha kwenye jarida letu."
+
+#: .\blog\templates\post_detail.html:59
+msgid "views"
+msgstr "ona"
+
+#: .\blog\templates\post_detail.html:95
+msgid "Want to level up your tech skills?"
+msgstr "Unataka kuongeza ujuzi wako wa teknolojia?"
+
+#: .\blog\templates\post_detail.html:99
+msgid "Join our premium tech course via MPESA"
+msgstr "Jiunge na kozi yetu ya premium kupitia MPESA"
+
+#: .\blog\templates\post_detail.html:104
+msgid "Enroll Now"
+msgstr "Jiandikishe Sasa"
+
+#: .\blog\templates\post_detail.html:116
+msgid "Comments"
+msgstr "Maoni"
+
+#: .\blog\templates\post_detail.html:171
+msgid "Reply..."
+msgstr "Jibu..."
+
+#: .\blog\templates\post_detail.html:176
+msgid "Reply"
+msgstr "Jibu"
+
+#: .\blog\templates\post_detail.html:184
+msgid "No comments yet. Be the first to comment."
+msgstr "Hakuna maoni bado. Kuwa wa kwanza kutoa maoni."
+
+#: .\blog\templates\post_detail.html:197
+msgid "Leave a Comment"
+msgstr "Acha Maoni"
+
+#: .\blog\templates\post_detail.html:216
+msgid "Your name"
+msgstr "Jina lako"
+
+#: .\blog\templates\post_detail.html:224
+msgid "Your email"
+msgstr "Barua pepe yako"
+
+#: .\blog\templates\post_detail.html:233
+msgid "Write your comment..."
+msgstr "Andika maoni yako..."
+
+#: .\blog\templates\post_detail.html:239
+msgid "Post Comment"
+msgstr "Tuma Maoni"
+=======
+msgid ""
+msgstr ""
+"Project-Id-Version: Phil Tech Blog 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-08 20:49+0300\n"
+"PO-Revision-Date: 2026-02-08 20:49+0300\n"
+"Last-Translator: Phil <you@example.com>\n"
+"Language-Team: Swahili\n"
+"Language: sw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\blog\templates\about.html:4
+msgid "About Phil Tech Blog | Phil Tech"
+msgstr "Kuhusu Phil Tech Blog | Phil Tech"
+
+#: .\blog\templates\about.html:9
+msgid "About"
+msgstr "Kuhusu"
+
+#: .\blog\templates\about.html:12
+msgid "Welcome to Phil Tech Blog – your go-to destination for practical tech knowledge, online earning strategies, and digital growth tips. Whether you're a beginner looking to start your online journey or a seasoned professional aiming to scale your skills and income, you've come to the right place."
+msgstr "Karibu kwenye Phil Tech Blog – mahali pako pa kupata maarifa ya vitendo ya teknolojia, mikakati ya kupata kipato mtandaoni, na mbinu za kukuza biashara ya kidijitali. Iwe wewe ni mgeni anayeanza safari yako mtandaoni au mtaalamu tajiri mwenye lengo la kuongeza ujuzi na kipato chake, umekuja mahali sahihi."
+
+#: .\blog\templates\about.html:15
+msgid "Our Mission"
+msgstr "Dhamira Yetu"
+
+#: .\blog\templates\about.html:16
+msgid "We aim to empower you with actionable knowledge that helps you:"
+msgstr "Tunakusudiwa kukuwezesha kwa maarifa yanayoweza kutekelezeka yanayokusaidia:"
+
+#: .\blog\templates\about.html:18
+msgid "Earn smarter and maximize online opportunities."
+msgstr "Pata kipato kwa busara na tumia fursa za mtandaoni kikamilifu."
+
+#: .\blog\templates\about.html:19
+msgid "Work efficiently using practical tech and programming skills."
+msgstr "Fanya kazi kwa ufanisi kwa kutumia ujuzi wa teknolojia na programu."
+
+#: .\blog\templates\about.html:20
+msgid "Build a sustainable online presence with real results."
+msgstr "Jenga uwepo mtandaoni endelevu wenye matokeo halisi."
+
+#: .\blog\templates\about.html:23
+msgid "What We Offer"
+msgstr "Tunachotoa"
+
+#: .\blog\templates\about.html:24
+msgid "At Phil Tech Blog, we provide:"
+msgstr "Kwenye Phil Tech Blog, tunatoa:"
+
+#: .\blog\templates\about.html:26
+msgid "Step-by-step tutorials on programming, web development, and tech tools."
+msgstr "Mafunzo ya hatua kwa hatua kuhusu programu, uendelezaji wa wavuti, na zana za teknolojia."
+
+#: .\blog\templates\about.html:27
+msgid "Insider tips for monetizing blogs and websites effectively."
+msgstr "Vidokezo vya ndani vya kupata kipato kutoka kwa blogu na tovuti kwa ufanisi."
+
+#: .\blog\templates\about.html:28
+msgid "Exclusive affiliate opportunities and guidance for MPESA integration in Tanzania."
+msgstr "Fursa za kipekee za ushirikiano na mwongozo wa kuunganisha na MPESA Tanzania."
+
+#: .\blog\templates\about.html:29
+msgid "Free downloadable resources to kickstart your digital journey immediately."
+msgstr "Rasilimali za bure za kupakua ili kuanza safari yako ya kidijitali mara moja."
+
+#: .\blog\templates\about.html:30
+msgid "Regular updates on trending tech insights and practical strategies."
+msgstr "Sasisho la kawaida kuhusu maarifa mapya ya teknolojia na mbinu za vitendo."
+
+#: .\blog\templates\about.html:33
+msgid "Why Follow Us?"
+msgstr "Kwa Nini Utufuate?"
+
+#: .\blog\templates\about.html:35
+msgid "Our content is designed to be practical, easy to implement, and results-driven. We break down complex concepts into actionable steps, so you can start seeing results right away. From beginner-friendly tutorials to advanced monetization techniques, we ensure you stay ahead in the digital space."
+msgstr "Yaliyomo yameundwa kuwa ya vitendo, rahisi kutekeleza, na yanalenga matokeo. Tunavunja dhana ngumu kuwa hatua zinazoweza kuchukuliwa, ili uanze kuona matokeo mara moja. Kutoka mafunzo kwa wanaoanza hadi mbinu za kupata kipato kwa kiwango cha juu, tunahakikisha unasonga mbele kwenye nafasi ya kidijitali."
+
+#: .\blog\templates\about.html:39
+msgid "Join Our Community"
+msgstr "Jiunge na Jamii Yetu"
+
+#: .\blog\templates\about.html:40
+msgid "Stay updated with the latest tips, guides, and income strategies by subscribing to our newsletter."
+msgstr "Baki na taarifa mpya kwa vidokezo, mwongozo, na mikakati ya kipato kwa kujiandikisha kwenye jarida letu."
+
+#: .\blog\templates\post_detail.html:59
+msgid "views"
+msgstr "ona"
+
+#: .\blog\templates\post_detail.html:95
+msgid "Want to level up your tech skills?"
+msgstr "Unataka kuongeza ujuzi wako wa teknolojia?"
+
+#: .\blog\templates\post_detail.html:99
+msgid "Join our premium tech course via MPESA"
+msgstr "Jiunge na kozi yetu ya premium kupitia MPESA"
+
+#: .\blog\templates\post_detail.html:104
+msgid "Enroll Now"
+msgstr "Jiandikishe Sasa"
+
+#: .\blog\templates\post_detail.html:116
+msgid "Comments"
+msgstr "Maoni"
+
+#: .\blog\templates\post_detail.html:171
+msgid "Reply..."
+msgstr "Jibu..."
+
+#: .\blog\templates\post_detail.html:176
+msgid "Reply"
+msgstr "Jibu"
+
+#: .\blog\templates\post_detail.html:184
+msgid "No comments yet. Be the first to comment."
+msgstr "Hakuna maoni bado. Kuwa wa kwanza kutoa maoni."
+
+#: .\blog\templates\post_detail.html:197
+msgid "Leave a Comment"
+msgstr "Acha Maoni"
+
+#: .\blog\templates\post_detail.html:216
+msgid "Your name"
+msgstr "Jina lako"
+
+#: .\blog\templates\post_detail.html:224
+msgid "Your email"
+msgstr "Barua pepe yako"
+
+#: .\blog\templates\post_detail.html:233
+msgid "Write your comment..."
+msgstr "Andika maoni yako..."
+
+#: .\blog\templates\post_detail.html:239
+msgid "Post Comment"
+msgstr "Tuma Maoni"
+>>>>>>> 4a481a0 (Updated blog added comment system and authentication)

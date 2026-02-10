@@ -1,0 +1,825 @@
+<<<<<<< HEAD
+/* ======================================================
+   GLOBAL RESET & TRANSITIONS
+====================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    transition: background-color 0.25s ease, color 0.25s ease;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+
+
+/* ======================================================
+   LIGHT MODE (DEFAULT)
+====================================================== */
+
+.theme-light {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Ensure readable text in light mode */
+.theme-light p,
+.theme-light span,
+.theme-light li,
+.theme-light small,
+.theme-light strong,
+.theme-light h1,
+.theme-light h2,
+.theme-light h3,
+.theme-light h4,
+.theme-light h5,
+.theme-light h6 {
+    color: #212529 !important;
+}
+
+.theme-light .text-muted {
+    color: #495057 !important;
+}
+
+
+/* ======================================================
+   NAVBAR — LIGHT MODE
+====================================================== */
+
+body.theme-light #mainNavbar {
+    background-color: #0d6efd;
+}
+
+body.theme-light #mainNavbar .navbar-brand,
+body.theme-light #mainNavbar .nav-link {
+    color: #ffffff !important;
+}
+
+body.theme-light #mainNavbar .nav-link:hover {
+    color: #dbeafe !important;
+}
+
+body.theme-light #mainNavbar select {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+
+/* ======================================================
+   DARK MODE — GLOBAL
+====================================================== */
+
+.theme-dark {
+    background-color: #121212;
+    color: #eaeaea;
+}
+
+.theme-dark p,
+.theme-dark span,
+.theme-dark li,
+.theme-dark small,
+.theme-dark strong,
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3,
+.theme-dark h4,
+.theme-dark h5,
+.theme-dark h6 {
+    color: #eaeaea !important;
+}
+
+.theme-dark .text-muted {
+    color: #b5b5b5 !important;
+}
+
+
+/* ======================================================
+   NAVBAR — DARK MODE
+====================================================== */
+
+.theme-dark .navbar {
+    background-color: #181818 !important;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.theme-dark .navbar .nav-link,
+.theme-dark .navbar-brand {
+    color: #ffffff !important;
+}
+
+
+/* ======================================================
+   CARDS / CONTENT BOXES
+====================================================== */
+
+.card {
+    border-radius: 12px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+
+.theme-dark .card {
+    background-color: #1e1e1e;
+    border-color: #333;
+    color: #ffffff;
+}
+
+
+/* ======================================================
+   POST LIST / CATEGORY CARDS
+====================================================== */
+
+.post-card {
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+.post-thumb {
+    max-height: 260px;
+    object-fit: cover;
+}
+
+.post-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post-link:hover {
+    text-decoration: underline;
+}
+
+.post-excerpt {
+    color: #495057;
+    line-height: 1.6;
+}
+
+
+/* ======================================================
+   LINKS
+====================================================== */
+
+a {
+    text-decoration: none;
+}
+
+.theme-dark a {
+    color: #66b2ff;
+}
+
+.theme-dark a:hover {
+    color: #99cfff;
+}
+
+
+/* ======================================================
+   FORMS / INPUTS
+====================================================== */
+
+input,
+textarea,
+select {
+    border-radius: 8px;
+}
+
+.theme-dark input,
+.theme-dark textarea,
+.theme-dark select {
+    background-color: #1c1c1c;
+    color: white;
+    border-color: #444;
+}
+
+.theme-dark input::placeholder,
+.theme-dark textarea::placeholder {
+    color: #aaaaaa;
+}
+
+
+/* ======================================================
+   LIST GROUPS / SIDEBAR
+====================================================== */
+
+.theme-dark .list-group-item {
+    background-color: #1c1c1c;
+    color: white;
+    border-color: #333;
+}
+
+.theme-dark .list-group-item a {
+    color: #ffffff;
+}
+
+
+/* ======================================================
+   PAGINATION
+====================================================== */
+
+.theme-dark .page-link {
+    background-color: #1e1e1e;
+    color: white;
+    border-color: #333;
+}
+
+.theme-dark .page-link:hover {
+    background-color: #333;
+}
+
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+footer {
+    margin-top: 4rem;
+}
+
+.theme-dark footer {
+    background-color: #0f0f0f !important;
+    border-top: 1px solid #2c2c2c;
+}
+
+
+/* ======================================================
+   BUTTONS
+====================================================== */
+
+.btn {
+    border-radius: 8px;
+}
+
+.theme-dark .btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+.theme-dark .btn-outline-light {
+    border-color: white;
+    color: white;
+}
+
+
+/* ======================================================
+   CODE BLOCKS
+====================================================== */
+
+.theme-dark pre,
+.theme-dark code {
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+
+/* ======================================================
+   ALERTS
+====================================================== */
+
+.theme-dark .alert {
+    background-color: #1f1f1f;
+    color: white;
+    border-color: #333;
+}
+
+
+/* ======================================================
+   DARK MODE BUTTON FIX
+====================================================== */
+
+#darkBtn {
+    background-color: white !important;
+}
+
+.theme-dark #darkBtn {
+    background-color: transparent !important;
+    border-color: white;
+    color: white;
+}
+
+#darkBtn:hover {
+    background-color: #e0e0ff;
+    color: #000080;
+}
+
+
+/* ======================================================
+   TABLES
+====================================================== */
+
+.theme-dark table {
+    color: white;
+}
+
+.theme-dark th,
+.theme-dark td {
+    border-color: #333;
+}
+
+
+/* ======================================================
+   SCROLLBAR (OPTIONAL)
+====================================================== */
+
+.theme-dark ::-webkit-scrollbar {
+    width: 8px;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 10px;
+}
+
+
+/* ======================================================
+   SMOOTH UI EFFECTS
+====================================================== */
+
+.card,
+.navbar,
+input,
+textarea,
+button,
+footer {
+    transition: all 0.2s ease;
+}
+
+/* ================= FOOTER BASE ================= */
+footer {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Links */
+footer a.footer-link {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Inputs & Buttons */
+footer input.footer-input,
+footer button.footer-btn {
+    transition: all 0.3s ease;
+}
+
+/* ================= LIGHT MODE ================= */
+.theme-light footer {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.theme-light footer a.footer-link {
+    color: #0d6efd;
+}
+
+.theme-light footer a.footer-link:hover {
+    color: #084298;
+}
+
+.theme-light footer input.footer-input,
+.theme-light footer button.footer-btn {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+/* ================= DARK MODE ================= */
+.theme-dark footer {
+    background-color: #121212;
+    color: #eaeaea;
+}
+
+.theme-dark footer a.footer-link {
+    color: #66b2ff;
+}
+
+.theme-dark footer a.footer-link:hover {
+    color: #99cfff;
+}
+
+.theme-dark footer input.footer-input,
+.theme-dark footer button.footer-btn {
+    background-color: #1c1c1c;
+    color: #eaeaea;
+    border: 1px solid #444;
+}
+=======
+/* ======================================================
+   GLOBAL RESET & TRANSITIONS
+====================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    transition: background-color 0.25s ease, color 0.25s ease;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+
+
+/* ======================================================
+   LIGHT MODE (DEFAULT)
+====================================================== */
+
+.theme-light {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Ensure readable text in light mode */
+.theme-light p,
+.theme-light span,
+.theme-light li,
+.theme-light small,
+.theme-light strong,
+.theme-light h1,
+.theme-light h2,
+.theme-light h3,
+.theme-light h4,
+.theme-light h5,
+.theme-light h6 {
+    color: #212529 !important;
+}
+
+.theme-light .text-muted {
+    color: #495057 !important;
+}
+
+
+/* ======================================================
+   NAVBAR — LIGHT MODE
+====================================================== */
+
+body.theme-light #mainNavbar {
+    background-color: #0d6efd;
+}
+
+body.theme-light #mainNavbar .navbar-brand,
+body.theme-light #mainNavbar .nav-link {
+    color: #ffffff !important;
+}
+
+body.theme-light #mainNavbar .nav-link:hover {
+    color: #dbeafe !important;
+}
+
+body.theme-light #mainNavbar select {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+
+/* ======================================================
+   DARK MODE — GLOBAL
+====================================================== */
+
+.theme-dark {
+    background-color: #121212;
+    color: #eaeaea;
+}
+
+.theme-dark p,
+.theme-dark span,
+.theme-dark li,
+.theme-dark small,
+.theme-dark strong,
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3,
+.theme-dark h4,
+.theme-dark h5,
+.theme-dark h6 {
+    color: #eaeaea !important;
+}
+
+.theme-dark .text-muted {
+    color: #b5b5b5 !important;
+}
+
+
+/* ======================================================
+   NAVBAR — DARK MODE
+====================================================== */
+
+.theme-dark .navbar {
+    background-color: #181818 !important;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.theme-dark .navbar .nav-link,
+.theme-dark .navbar-brand {
+    color: #ffffff !important;
+}
+
+
+/* ======================================================
+   CARDS / CONTENT BOXES
+====================================================== */
+
+.card {
+    border-radius: 12px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+
+.theme-dark .card {
+    background-color: #1e1e1e;
+    border-color: #333;
+    color: #ffffff;
+}
+
+
+/* ======================================================
+   POST LIST / CATEGORY CARDS
+====================================================== */
+
+.post-card {
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+.post-thumb {
+    max-height: 260px;
+    object-fit: cover;
+}
+
+.post-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post-link:hover {
+    text-decoration: underline;
+}
+
+.post-excerpt {
+    color: #495057;
+    line-height: 1.6;
+}
+
+
+/* ======================================================
+   LINKS
+====================================================== */
+
+a {
+    text-decoration: none;
+}
+
+.theme-dark a {
+    color: #66b2ff;
+}
+
+.theme-dark a:hover {
+    color: #99cfff;
+}
+
+
+/* ======================================================
+   FORMS / INPUTS
+====================================================== */
+
+input,
+textarea,
+select {
+    border-radius: 8px;
+}
+
+.theme-dark input,
+.theme-dark textarea,
+.theme-dark select {
+    background-color: #1c1c1c;
+    color: white;
+    border-color: #444;
+}
+
+.theme-dark input::placeholder,
+.theme-dark textarea::placeholder {
+    color: #aaaaaa;
+}
+
+
+/* ======================================================
+   LIST GROUPS / SIDEBAR
+====================================================== */
+
+.theme-dark .list-group-item {
+    background-color: #1c1c1c;
+    color: white;
+    border-color: #333;
+}
+
+.theme-dark .list-group-item a {
+    color: #ffffff;
+}
+
+
+/* ======================================================
+   PAGINATION
+====================================================== */
+
+.theme-dark .page-link {
+    background-color: #1e1e1e;
+    color: white;
+    border-color: #333;
+}
+
+.theme-dark .page-link:hover {
+    background-color: #333;
+}
+
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+footer {
+    margin-top: 4rem;
+}
+
+.theme-dark footer {
+    background-color: #0f0f0f !important;
+    border-top: 1px solid #2c2c2c;
+}
+
+
+/* ======================================================
+   BUTTONS
+====================================================== */
+
+.btn {
+    border-radius: 8px;
+}
+
+.theme-dark .btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+.theme-dark .btn-outline-light {
+    border-color: white;
+    color: white;
+}
+
+
+/* ======================================================
+   CODE BLOCKS
+====================================================== */
+
+.theme-dark pre,
+.theme-dark code {
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+
+/* ======================================================
+   ALERTS
+====================================================== */
+
+.theme-dark .alert {
+    background-color: #1f1f1f;
+    color: white;
+    border-color: #333;
+}
+
+
+/* ======================================================
+   DARK MODE BUTTON FIX
+====================================================== */
+
+#darkBtn {
+    background-color: white !important;
+}
+
+.theme-dark #darkBtn {
+    background-color: transparent !important;
+    border-color: white;
+    color: white;
+}
+
+#darkBtn:hover {
+    background-color: #e0e0ff;
+    color: #000080;
+}
+
+
+/* ======================================================
+   TABLES
+====================================================== */
+
+.theme-dark table {
+    color: white;
+}
+
+.theme-dark th,
+.theme-dark td {
+    border-color: #333;
+}
+
+
+/* ======================================================
+   SCROLLBAR (OPTIONAL)
+====================================================== */
+
+.theme-dark ::-webkit-scrollbar {
+    width: 8px;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 10px;
+}
+
+
+/* ======================================================
+   SMOOTH UI EFFECTS
+====================================================== */
+
+.card,
+.navbar,
+input,
+textarea,
+button,
+footer {
+    transition: all 0.2s ease;
+}
+
+/* ================= FOOTER BASE ================= */
+footer {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Links */
+footer a.footer-link {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Inputs & Buttons */
+footer input.footer-input,
+footer button.footer-btn {
+    transition: all 0.3s ease;
+}
+
+/* ================= LIGHT MODE ================= */
+.theme-light footer {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.theme-light footer a.footer-link {
+    color: #0d6efd;
+}
+
+.theme-light footer a.footer-link:hover {
+    color: #084298;
+}
+
+.theme-light footer input.footer-input,
+.theme-light footer button.footer-btn {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+/* ================= DARK MODE ================= */
+.theme-dark footer {
+    background-color: #121212;
+    color: #eaeaea;
+}
+
+.theme-dark footer a.footer-link {
+    color: #66b2ff;
+}
+
+.theme-dark footer a.footer-link:hover {
+    color: #99cfff;
+}
+
+.theme-dark footer input.footer-input,
+.theme-dark footer button.footer-btn {
+    background-color: #1c1c1c;
+    color: #eaeaea;
+    border: 1px solid #444;
+}
+>>>>>>> 4a481a0 (Updated blog added comment system and authentication)

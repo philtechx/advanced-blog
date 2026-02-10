@@ -1,0 +1,49 @@
+<<<<<<< HEAD
+{% extends 'base.html' %}
+{% block title %}Home | Phil Tech Blog{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Latest Posts</h2>
+
+{% for post in posts %}
+<div class="card mb-3 shadow-sm">
+    <div class="card-body">
+        <h5><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h5>
+        <small class="text-muted">
+            <i class="bi bi-calendar-event-fill"></i> {{ post.created|date:"F d, Y" }}
+            &nbsp; | &nbsp;
+            <i class="bi bi-folder-fill"></i> <a href="{% url 'category' post.category.slug %}">{{ post.category.name }}</a>
+        </small>
+        <p class="mt-2">{{ post.content|truncatechars:150 }}</p>
+        <a href="{% url 'post_detail' post.slug %}" class="btn btn-sm btn-primary">Read More</a>
+    </div>
+</div>
+{% empty %}
+<p>No posts found.</p>
+{% endfor %}
+{% endblock %}
+=======
+{% extends 'base.html' %}
+{% block title %}Home | Phil Tech Blog{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Latest Posts</h2>
+
+{% for post in posts %}
+<div class="card mb-3 shadow-sm">
+    <div class="card-body">
+        <h5><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h5>
+        <small class="text-muted">
+            <i class="bi bi-calendar-event-fill"></i> {{ post.created|date:"F d, Y" }}
+            &nbsp; | &nbsp;
+            <i class="bi bi-folder-fill"></i> <a href="{% url 'category' post.category.slug %}">{{ post.category.name }}</a>
+        </small>
+        <p class="mt-2">{{ post.content|truncatechars:150 }}</p>
+        <a href="{% url 'post_detail' post.slug %}" class="btn btn-sm btn-primary">Read More</a>
+    </div>
+</div>
+{% empty %}
+<p>No posts found.</p>
+{% endfor %}
+{% endblock %}
+>>>>>>> 4a481a0 (Updated blog added comment system and authentication)

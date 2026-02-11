@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 {% extends 'base.html' %}
 {% block title %}Search Results - My Blog{% endblock %}
 
@@ -18,24 +18,3 @@
     <p>No results found. Try another keyword.</p>
 {% endif %}
 {% endblock %}
-=======
-{% extends 'base.html' %}
-{% block title %}Search Results - My Blog{% endblock %}
-
-{% block content %}
-<h1>Search Results for "{{ query }}"</h1>
-
-{% if results %}
-    {% for post in results %}
-    <div class="card mb-3">
-        <div class="card-body">
-            <h5 class="card-title"><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h5>
-            <p>{{ post.meta_description|truncatewords:25 }}</p>
-        </div>
-    </div>
-    {% endfor %}
-{% else %}
-    <p>No results found. Try another keyword.</p>
-{% endif %}
-{% endblock %}
->>>>>>> 4a481a0 (Updated blog added comment system and authentication)

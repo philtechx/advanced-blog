@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #: templates/about.html:6
 msgid ""
 msgstr ""
@@ -34,40 +33,3 @@ msgid "We aim to empower you with actionable knowledge that helps you:"
 msgstr "Tunakusudia kukuimarisha kwa ujuzi unaoweza kutekelezwa ambao utakusaidia:"
 
 # ... continue for all other msgid strings
-=======
-#: templates/about.html:6
-msgid ""
-msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-08 00:00+0000\n"
-"PO-Revision-Date: 2026-02-08 00:00+0000\n"
-"Last-Translator: Your Name <you@example.com>\n"
-"Language-Team: Swahili\n"
-"Language: sw\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-
-
-msgid "About Phil Tech Blog | Phil Tech"
-msgstr "Kuhusu Phil Tech Blog | Phil Tech"
-
-#: templates/about.html:9
-msgid "About"
-msgstr "Kuhusu"
-
-#: templates/about.html:11
-msgid "Welcome to Phil Tech Blog – your go-to destination for practical tech knowledge, online earning strategies, and digital growth tips. Whether you're a beginner looking to start your online journey or a seasoned professional aiming to scale your skills and income, you've come to the right place."
-msgstr "Karibu Phil Tech Blog – sehemu yako ya kupata ujuzi wa teknolojia, mbinu za kupata kipato mtandaoni, na mbinu za kukuza uwepo wako wa kidijitali. Iwe wewe ni mgeni anayejifunza au mtaalamu anayetaka kuongeza ujuzi na kipato, umefika mahali sahihi."
-
-#: templates/about.html:14
-msgid "Our Mission"
-msgstr "Dira Yetu"
-
-#: templates/about.html:15
-msgid "We aim to empower you with actionable knowledge that helps you:"
-msgstr "Tunakusudia kukuimarisha kwa ujuzi unaoweza kutekelezwa ambao utakusaidia:"
-
-# ... continue for all other msgid strings
->>>>>>> 4a481a0 (Updated blog added comment system and authentication)

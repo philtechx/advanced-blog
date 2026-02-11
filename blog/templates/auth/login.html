@@ -1,21 +1,52 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load i18n %}
 
+{% block title %}Login{% endblock %}
+
 {% block content %}
-<div class="container mt-5" style="max-width:500px;">
-    <h3>{% trans "Login" %}</h3>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.non_field_errors }}
-        {% for field in form %}
-            <div class="mb-2">
-                {{ field.label_tag }}
-                {{ field }}
-                <div class="text-danger small">{{ field.errors }}</div>
-            </div>
-        {% endfor %}
-        <button type="submit" class="btn btn-primary">{% trans "Login" %}</button>
-    </form>
-    <p class="mt-2">{% trans "Don't have an account?" %} <a href="{% url 'register' %}">{% trans "Register" %}</a></p>
+<div class="row justify-content-center mt-5">
+
+<div class="col-md-5">
+
+<div class="card shadow-lg border-0 p-4">
+
+<h4 class="fw-bold mb-3 text-center">
+    🔐 Login
+</h4>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+<form method="POST">
+{% csrf_token %}
+
+<div class="mb-3">
+    <label class="form-label">Username</label>
+    <input type="text" name="username" class="form-control" required>
+</div>
+
+<div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" required>
+</div>
+
+<button type="submit" class="btn btn-primary w-100 fw-bold">
+    Login
+</button>
+
+<p class="text-center mt-3 small">
+    No account? 
+    <a href="{% url 'register' %}">Register here</a>
+</p>
+
+</form>
+
+</div>
+</div>
 </div>
 {% endblock %}

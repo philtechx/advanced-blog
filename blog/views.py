@@ -163,42 +163,62 @@ def search(request):
 # ==================================================
 def register(request):
     lang = get_lang(request)
+
     if request.method == "POST":
-        username = request.POST.get("username")
-        email = request.POST.get("email")
+        username = request.POST.get("username", "").strip()
+        email = request.POST.get("email", "").strip()
         password1 = request.POST.get("password1")
         password2 = request.POST.get("password2")
+
+        # Validation
+        if not username or not email or not password1:
+            messages.error(request, _("All fields are required"))
+            return redirect("register")
 
         if password1 != password2:
             messages.error(request, _("Passwords do not match"))
             return redirect("register")
+
         if User.objects.filter(username=username).exists():
             messages.error(request, _("Username already exists"))
             return redirect("register")
 
-        user = User.objects.create_user(username=username, email=email, password=password1)
-        login(request, user)
-        messages.success(request, _("Account created successfully"))
-        return redirect("home")
-    return render(request, "auth/register.html", {"lang": lang})
+        if User.objects.filter(email=email).exists():
+            messages.error(request, _("Email already exists"))
+            return redirect("register")
 
+        # Create user
+        user = User.objects.create_user(
+            username=username,
+            email=email,
+            password=password1
+        )
+
+        messages.success(request, _("Registration successful! Please login."))
+        return redirect("login")
+
+    return render(request, "auth/register.html", {"lang": lang})
 
 # ==================================================
 # LOGIN USER
 # ==================================================
 def user_login(request):
     lang = get_lang(request)
+
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
+
         user = authenticate(request, username=username, password=password)
+
         if user:
             login(request, user)
             messages.success(request, _("Welcome back!"))
-            return redirect("home")
-        messages.error(request, _("Invalid credentials"))
-    return render(request, "auth/login.html", {"lang": lang})
+            return redirect(request.GET.get("next", "home"))
 
+        messages.error(request, _("Invalid username or password"))
+
+    return render(request, "auth/login.html", {"lang": lang})
 
 # ==================================================
 # LOGOUT USER
